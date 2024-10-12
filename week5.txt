@@ -1,0 +1,59 @@
+Week 5     Сериккан Расул ИС 231(4)    Вариант 2
+using System;
+
+public class Product
+{
+    // Product name
+    public string Name { get; set; }
+    // Product price
+    public decimal Price { get; set; }
+    // Quantity in stock
+    public int Stock { get; set; }
+
+    // Constructor that takes all parameters
+    public Product(string name, decimal price, int stock)
+    {
+        Name = name; // Initialize the product name
+        Price = price; // Initialize the product price
+        Stock = stock; // Initialize the stock quantity
+    }
+
+    // Constructor that takes only the product name, setting price and stock to 0 by default
+    public Product(string name) : this(name, 0, 0)
+    {
+        // This constructor calls the other constructor with default values for price and stock
+    }
+
+    // Method to update the product price
+    public void UpdatePrice(decimal newPrice)
+    {
+        Price = newPrice; // Update the product price
+    }
+
+    // Method to restock the product
+    public void Restock(int quantity)
+    {
+        Stock += quantity; // Increase the stock quantity
+    }
+
+    // Method to get product information
+    public string GetProductInfo()
+    {
+        return $"Product: {Name}, Price: {Price:C}, Stock: {Stock}"; // Format the string with product information
+    }
+
+    // Method to sell the product
+    public void Sell(int quantity)
+    {
+        if (quantity > Stock)
+        {
+            Console.WriteLine("Insufficient stock available."); // Check if enough stock is available
+        }
+        else
+        {
+            Stock -= quantity; // Decrease the stock quantity
+            Console.WriteLine($"{quantity} {Name} sold."); // Notify about the sale
+        }
+    }
+}
+

@@ -1,0 +1,16 @@
+// Example usage of the class
+class Program
+{
+    static void Main()
+    {
+        Product apple = new Product("Apple", 0.5m, 100); // Create a new product with name, price, and stock
+        Console.WriteLine(apple.GetProductInfo()); // Display product information
+
+        apple.UpdatePrice(0.6m); // Update the price
+        apple.Restock(50); // Restock the product
+        Console.WriteLine(apple.GetProductInfo()); // Display product information again
+
+        apple.Sell(30); // Sell 30 apples
+        Console.WriteLine(apple.GetProductInfo()); // Display information after the sale
+    }
+}

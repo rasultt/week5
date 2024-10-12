@@ -1,0 +1,6 @@
+Product: Apple, Price: ?0.50, Stock: 100
+Product: Apple, Price: ?0.60, Stock: 150
+30 Apple sold.
+Product: Apple, Price: ?0.60, Stock: 120
+
+=== Code Execution Successful ===
